@@ -20,7 +20,8 @@ import numpy as np
 import pandas as pd
 import requests
 
-ROOT = Path(__file__).resolve().parents[3]
+from denguekay.config.paths import PAPER_BUNDLE, ROOT
+
 STUDY = ROOT / "research" / "09_epidemics_revision"
 STUDY08 = ROOT / "research" / "08_v3_confirmed_cases"
 sys.path.insert(0, str(STUDY08 / "code"))
@@ -34,7 +35,6 @@ ARMS_DIR = OUTPUT / "brazos"
 GEOGRAPHY = OUTPUT / "insumos" / "geografia_distritos.csv"
 PROTOCOL = STUDY / "protocolo.md"
 MANIFEST = STUDY08 / "manifiesto_b3_v4.json"
-PAPER_BUNDLE = ROOT.parent / "denguekay_paper_latex_revisado" / "reproducibility"
 SEEDS = tuple(spatial.pa.SEEDS)
 DECISION_SEASONS = tuple(spatial.DECIDING)
 SEASONS = tuple(range(2009, 2027))
